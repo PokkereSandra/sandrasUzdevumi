@@ -8,13 +8,16 @@
 //////////****************\\\\\\\\
 //////************************\\\\
 //********************************
+$leftSide = "/";
+$middle = "*";
+$rightSide = "\\";
+$rows = 5;
+$columns= 32;
 
-$rows = 3;
 for($i = 0; $i<$rows; $i++) {
-echo str_repeat("////",$i+2);
-echo str_repeat("****",$i);
-echo str_repeat("****",$i);
-echo str_repeat("xxxx",$i+2);
+echo str_repeat($leftSide,$columns/2-$i*4);
+echo str_repeat($middle,$i*8);
+echo str_repeat($rightSide,$columns/2-$i*4);
 
 echo PHP_EOL;
 ;}
